@@ -15,18 +15,18 @@
     <title>Ankit Kotnala | Welcome</title>
     <!-- Search Engine -->
     <meta name="description"
-          content="Hello this is Ankit kotnala. A Software Devloper and AI Enthusiast ">
+          content="Hello this is Ankit kotnala. A Software Devloper and Data Science Enthusiast ">
     <meta name="image" content="images/ankitCartoon.jpg">
     <!-- Schema.org for Google -->
     <meta itemprop="name" content="Ankit Kotnala">
     <meta itemprop="description"
-          content="Hello this is Ankit kotnala. A Software Devloper and AI Enthusiast">
+          content="Hello this is Ankit kotnala. A Software Devloper and Data Science Enthusiast">
     <meta itemprop="image" content="images/ankit.jpg">
     <!-- Twitter -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Ankit Kotnala">
     <meta name="twitter:description"
-          content="Hello this is Ankit kotnala. A Software Devloper and AI Enthusiast">
+          content="Hello this is Ankit kotnala. A Software Devloper and Data Science Enthusiast">
     <meta name="twitter:site" content="@ankitkotnala11">
     <meta name="twitter:creator" content="@ankitkotnala11">
     <meta name="twitter:image:src" content="https://twitter.com/AnkitKotnala11">
@@ -35,7 +35,7 @@
     <meta name="linkedin:card" content="summary">
     <meta name="linkedin:title" content="Ankit Kotnala">
     <meta name="linkedin:description"
-          content="Hello this is Ankit kotnala. A Software Devloper and AI Enthusiast">
+          content="Hello this is Ankit kotnala. A Software Devloper and Data Science Enthusiast">
     <meta name="linkedin:site" content="@ankitkotnala007">
     <meta name="linkedin:creator" content="@ankitkotnala007">
     <meta name="linkedin:image:src" content="https://www.linkedin.com/in/ankitkotnala007/">
@@ -44,7 +44,7 @@
     <meta name="instagram:card" content="summary">
     <meta name="instagram:title" content="Ankit Kotnala">
     <meta name="instagram:description"
-          content="Hello this is Ankit kotnala. A Software Devloper and AI Enthusiast">
+          content="Hello this is Ankit kotnala. A Software Devloper and Data Science Enthusiast">
     <meta name="instagram:site" content="@theankitkotnala">
     <meta name="instagram:creator" content="@theankitkotnala">
     <meta name="instagram:image:src" content="https://www.instagram.com/theankitkotnala/">
@@ -53,7 +53,7 @@
     <!-- Open Graph general (Facebook, Pinterest & Google+) -->
     <meta name="og:title" content="Ankit Kotnala">
     <meta name="og:description"
-          content="Hello this is Ankit kotnala. A Software Devloper and AI Enthusiast">
+          content="Hello this is Ankit kotnala. A Software Devloper and Data Science Enthusiast">
     <meta name="og:image" content="https://www.facebook.com/ankit.kotnala.965">
     <meta name="og:url" content="index.html">
     <meta name="og:site_name" content="Ankit Kotnala (kotnalakotnala7)">
@@ -156,7 +156,7 @@
                        
                               <div class="wow fadeInUp col-md-6 col-sm-6" data-wow-delay="0.6s">
                                           <h1><u>Abo</u>ut me </h1>
-                                    <p><h2><b>Hello !</b> My name is Ankit kotnala , I'm a Software Developer and AI Enthusiat  </b></h2></p>            
+                                    <p><h2><b>Hello !</b> My name is Ankit kotnala , I'm a Software Developer and Data Science Enthusiat  </b></h2></p>            
                                      <h1><p>A growing engineer who has the technical knowledge of how things work in the world of zero's and one's, ready with an edge to dive into the design process to discover, ideate and build some cool product.</p>  </h1>
                                </div>
                        
