@@ -113,7 +113,7 @@
                             <div class="sub-title">
                                <h2>My Blog</h2>
                                
-                                <a href="#"><i class="icon-envelope"></i></a>
+                                <a href="contact.html"><i class="icon-envelope"></i></a>
                                 
                              </div>
                             
@@ -307,7 +307,7 @@
             });
       
      //Blog 3 -------------------------------------------------
-      var dbRef = firebase.database().ref("Blog/Blog_Index/Blog_1/");
+      var dbRef = firebase.database().ref("Blog/Blog_Index/Blog_3/");
       dbRef.on('value', function (snapshot) {
              document.getElementById('blog_3_title').innerText = snapshot.child('Title').val();
         document.getElementById('blog_3_date').innerText= snapshot.child('Date').val();
@@ -318,7 +318,7 @@
             });
 
       //Blog 4 -------------------------------------------------
-      var dbRef = firebase.database().ref("Blog/Blog_Index/Blog_2/");
+      var dbRef = firebase.database().ref("Blog/Blog_Index/Blog_4/");
       dbRef.on('value', function (snapshot) {
         document.getElementById('blog_4_title').innerText = snapshot.child('Title').val();
         document.getElementById('blog_4_date').innerText= snapshot.child('Date').val();
@@ -329,7 +329,7 @@
             });
 
              //Blog 5 -------------------------------------------------
-      var dbRef = firebase.database().ref("Blog/Blog_Index/Blog_1/");
+      var dbRef = firebase.database().ref("Blog/Blog_Index/Blog_5/");
       dbRef.on('value', function (snapshot) {
         document.getElementById('blog_5_title').innerText = snapshot.child('Title').val();
         document.getElementById('blog_5_date').innerText= snapshot.child('Date').val();
