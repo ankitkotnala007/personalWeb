@@ -295,7 +295,7 @@
             });
       
       //Blog 2 -------------------------------------------------
-     var dbRef = firebase.database().ref("Blog/Blog_Index/Blog_2/");
+     var dbRef = firebase.database().ref("Blog/Blog_Index/Blog_5/");
       dbRef.on('value', function (snapshot) {
         document.getElementById('blog_2_title').innerText = snapshot.child('Title').val();
         document.getElementById('blog_2_date').innerText= snapshot.child('Date').val();
@@ -329,7 +329,7 @@
             });
 
              //Blog 5 -------------------------------------------------
-      var dbRef = firebase.database().ref("Blog/Blog_Index/Blog_5/");
+      var dbRef = firebase.database().ref("Blog/Blog_Index/Blog_2/");
       dbRef.on('value', function (snapshot) {
         document.getElementById('blog_5_title').innerText = snapshot.child('Title').val();
         document.getElementById('blog_5_date').innerText= snapshot.child('Date').val();
