@@ -16,7 +16,7 @@
     <meta name="robots" content="index,follow">
     
     
-    <title>DevBlog - Personal Blog Template</title>
+    <title>Contact : Have any project ?</title>
     
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/images/favicon/icon.png">
@@ -37,8 +37,14 @@
 	   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 	   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    
-
+    <script async="async" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-4498367174312520",
+              enable_page_level_ads: true
+         });
+    </script>
+<script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
   </head>
 
  <body>
@@ -125,7 +131,10 @@
                                    <h1>Looking for a <span class="main-color">online presence</span>?</h1>
                                    </div>
                                    
-                                  <p>I am in the website field since 2004 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at quam at orci commodo hendrerit vitae nec eros. Vestibulum neque est, imperdiet nec tortor nec, tempor semper metus. <b>I am a developer</b>, et accumsan nisi. Duis laoreet pretium ultricies. Curabitur rhoncus auctor nunc congue sodales. Sed posuere nisi ipsum, eget dignissim nunc dapibus eget. Aenean elementum sollicitudin sapien ut sapien fermentum aliquet mollis. Curabitur ac quam orci sodales quam ut tempor.</p>
+                                  <p>You never get a second chance to make a first impression -- that’s why your homepage is undoubtedly one of the most important web pages on your website.
+                                      
+                                      For any given company, the homepage is its virtual front door. If a new visitor doesn't like what they see, their knee-jerk reaction is to hit the "back" button.
+                                      That's right -- unfortunately, a lot of people still judge a book by its cover.</p>
                                      <!-- Intro End -->
                                 
                                 
@@ -195,9 +204,9 @@
 						              <select id="subject" class="form-group form-control">
 							             <option value="" selected disabled>Subject</option>
 							             <option>Website Design & Development</option>
-							             <option>Wordpress Development</option>
+							             <option>Mobile App Development (Android)</option>
 						                 <option>Search Engine Optimization</option>
-                                         <option>Mobile Website</option>
+                                         <option>Graphic Design</option>
 							             <option>I Want to General Talk</option>
                                          <option>Other</option>
 						               </select>
@@ -227,21 +236,21 @@
                          
                         
                         
-                        <!-- Subscribe Form Start -->
-                        <div class="col-md-8 col-md-offset-2">
-                           <form id="mc-form" method="post" action="">
-								
-						  <div class="subscribe-form margin-top-20">
-							 <input id="mc-email" type="email" placeholder="Email Address" class="text-input">
-							  <button class="submit-btn" type="submit">Submit</button>
-								</div>
-                                <p>Subscribe to my weekly newsletter</p>
-								<label for="mc-email" class="mc-label"></label>
-							  </form>
-                             
-                           </div>
-                           <!-- Subscribe Form End -->
-                           
+                       <!-- Subscribe Form Start -->
+              <div class="col-md-8 col-md-offset-2">
+                  
+                  
+                                  <div class="subscribe-form margin-top-20">
+                                    <input id="Suscribe_email" type="email" placeholder="Email Address" class="text-input">
+                                    <button class="submit-btn" type="submit" id="Suscribe_button">Submit</button>
+                                  </div>
+                                  <p>Subscribe to my weekly newsletter</p>
+                                  <label for="mc-email" class="mc-label"></label>
+                  
+                  
+                                </div>
+                                <!-- Subscribe Form End -->
+                  
                            
                          </div>
                      
@@ -293,5 +302,52 @@
     <script type="text/javascript" src="assets/js/scripts.js"></script>
 
     
+    <script type="text/javascript">
+      
+      
+            // Initialize Firebase
+            var config = {
+              apiKey: "AIzaSyAnB1brNLCzOhqxzNZoYcAEXATsgotQ0VA",
+              authDomain: "personalwebsite-3e776.firebaseapp.com",
+              databaseURL: "https://personalwebsite-3e776.firebaseio.com",
+              projectId: "personalwebsite-3e776",
+              storageBucket: "personalwebsite-3e776.appspot.com",
+              messagingSenderId: "92631416694"
+            };
+            firebase.initializeApp(config);
+            var suscribe_button = document.getElementById('Suscribe_button');
+            suscribe_button.addEventListener('click', e => {
+        var suscribe_email_withdot = document.getElementById('Suscribe_email').value;
+        var suscribe_email_withoutdot = suscribe_email_withdot.split('.').join("_");
+      
+        
+        var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+        if (reg.test(suscribe_email_withdot) == false) {
+          alert('Invalid Email Address');
+          return false;
+        } else {
+          var currentdate = new Date();
+          var datetime = currentdate.getDate() + "/"
+            + (currentdate.getMonth() + 1) + "/"
+            + currentdate.getFullYear() + " @ "
+            + currentdate.getHours() + ":"
+            + currentdate.getMinutes() + ":"
+            + currentdate.getSeconds();
+
+          var dbRef = firebase.database().ref("Blog/Suscribed_Emails/" + suscribe_email_withoutdot + "/");
+          var data = {
+            date: datetime
+          };
+          dbRef.update(data);
+
+        }
+
+        document.getElementById('Suscribe_email').value = "";
+        alert('Suscribed Successfully ...!! ');
+        
+      });
+
+      </script>
    </body>
  </html>
