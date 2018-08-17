@@ -39,13 +39,7 @@
     <![endif]-->
     
     <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
-<script async='async' src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({
-          google_ad_client: "ca-pub-4498367174312520",
-          enable_page_level_ads: true
-     });
-</script>
+
 
   </head>
 
@@ -214,15 +208,15 @@
                         
                         <!-- Subscribe Form Start -->
                         <div class="col-md-8 col-md-offset-2">
-                           <form id="mc-form" method="post" action="">
+                           
 								
 						  <div class="subscribe-form margin-top-20">
-							 <input id="mc-email" type="email" placeholder="Email Address" class="text-input">
-							  <button class="submit-btn" type="submit">Submit</button>
+							 <input id="Suscribe_email" type="email" placeholder="Email Address" class="text-input">
+							  <button class="submit-btn" type="submit" id="Suscribe_button">Submit</button>
 								</div>
                                 <p>Subscribe to my weekly newsletter</p>
 								<label for="mc-email" class="mc-label"></label>
-							  </form>
+							 
                              
                            </div>
                            <!-- Subscribe Form End -->
@@ -236,7 +230,7 @@
                           <ul class="menu-link">
                                <li><a href="index.html">Home</a></li>
                                <li><a href="../index.html">About</a></li>
-                               <li><a href="#">Contact</a></li>
+                               <li><a href="contact.html">Contact</a></li>
                             </ul>
                             
                           <p>© Copyright 2018 Blog. All rights reserved</p>
@@ -343,8 +337,39 @@
 
             });
 
-
+            var suscribe_button = document.getElementById('Suscribe_button');
+            
+                
+             suscribe_button.addEventListener('click', e =>{
+              var suscribe_email_withdot =  document.getElementById('Suscribe_email').value;
+              var suscribe_email_withoutdot = suscribe_email_withdot.split('.').join("_");
            
+              var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+    
+            if (reg.test(suscribe_email_withdot) == false) 
+            {
+                alert('Invalid Email Address');
+                return false;
+            }else{
+                var currentdate = new Date(); 
+                var datetime =  currentdate.getDate() + "/"
+                    + (currentdate.getMonth()+1)  + "/" 
+                    + currentdate.getFullYear() + " @ "  
+                    + currentdate.getHours() + ":"  
+                    + currentdate.getMinutes() + ":" 
+                    + currentdate.getSeconds();
+             
+                var dbRef = firebase.database().ref("Blog/Suscribed_Emails/"+suscribe_email_withoutdot+"/");
+                var data = {
+                date :datetime 
+                         };
+                dbRef.update(data);
+              }
+    
+              suscribe_email_withdot.value = '';
+              alert('Suscribed Successfully ...!! ');
+    
+             });
     </script>
     
    </body>
