@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+ <title>Let's Play</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
+
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+
+</head>
+
+<body style="background:black;">
+
+<div class="container" style="margin-top:100px;">
+<div class="text-center"><h2 style="color:white;font-family: 'Aldrich';">Welcome , Let's Play !</h2></div><br>
+<div class="row">
+<div class="col-md-12">
+
+<center>
+<button type="button" class="button_cust button_custom" id="btn_cust_mode" style="font-family: 'Aldrich';">Custom</button>
+
+<button type="button" class="button_on" id="btn_on_mode" value="online" style="font-family: 'Aldrich';">Online</button></center>
+
+
+
+</div>
+</div>
+</div>
+
+
+		
+<div class="demo-wrapper">
+	<div class="html5-dialog">
+		<dialog id="window">
+			<form>
+			<div class="row">
+			   <div class="col-md-12">		  
+				<label class="plabel" style="font-family: 'Aldrich';">Player 1</label>
+				  <input type="text" id="player_1_name" name="player_1">
+				 
+			   </div>
+
+			</div>			
+			<div class="row">
+			   <div class="col-md-12">		  
+				 <label class="plabel" id="pl2" style="font-family: 'Aldrich';">Player 2</label>
+				  <input type="text" id="player_2_name" name="player_2">
+			   </div>
+
+			</div>			
+
+
+			</form>
+
+
+			<button id="start" class="modal_start_btn" onclick="play()" value="start">start</button>
+			<button id="exit" class="modal_exit_btn">cancel</button>
+		</dialog>
+      </div>
+</div>
+
+
+
+<div class="container">
+	<center>
+	<img src="assets/images/tictactoe.png" style="width: 200px;">
+	</center>
+</div>
+
+
+
+
+<script>
+ (function() {
+   	var dialog = document.getElementById('window');
+	document.getElementById('btn_cust_mode').onclick = function() {
+		dialog.show();
+		document.getElementById("pl2").style.visibility = "";
+		document.getElementById("player_2_name").style.visibility = "";
+	};
+	document.getElementById('exit').onclick = function() {
+		dialog.close();
+	};
+})();
+
+(function() {
+   	var dialog = document.getElementById('window');
+	document.getElementById('btn_on_mode').onclick = function() {
+		dialog.show();
+		document.getElementById("pl2").style.visibility = "hidden";
+		document.getElementById("player_2_name").style.visibility = "hidden";
+		
+	};
+	document.getElementById('exit').onclick = function() {
+		dialog.close();
+	};
+})();
+
+function play(){
+	var p1_name = document.getElementById("player_1_name");
+	var p2_name = document.getElementById("player_2_name");
+
+	if (window.getComputedStyle(p2_name).visibility === "hidden") {
+   		player_2_name.value = "Computer";
+		localStorage.setItem("p2_name", player_2_name.value);
+		localStorage.setItem("mode","Computer");
+  	}else{
+		localStorage.setItem("p2_name", player_2_name.value);
+		localStorage.setItem("mode","custom");
+	}
+	
+	console.log(player_1_name.value+" "+player_2_name.value);
+	localStorage.setItem("p1_name", player_1_name.value);
+	
+	
+
+	
+
+	window.location.href = "TicTacToe.htm";
+	
+}
+
+
+
+
+
+  </script>
+
+
+</body>
+
+</html>
+

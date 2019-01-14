@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Go on Players!</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="assets/css/Gamestyle.css">
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
+<script>
+	var check_ply_av = localStorage.getItem("p1_name");
+	if(check_ply_av == null){
+	  window.location.href = "index.htm";
+		}
+</script>
+</head>
+
+<body style="background:black;">
+
+<div class="container" style="margin-top:100px;">
+	<div class="row">
+		<div class="col-md-12">
+			<center><h3 style="color:white;">
+				<span id="p1_name" style="color:white;font-family: 'Aldrich';"></span> (P1) : <span style="color:white;" id="p1_count"></span> </h3>
+				
+			<h3 style="color:white;"> <span id="p2_name" style="color:white;font-family: 'Aldrich';"></span> (P2) : <span id="p2_count" style="color:white;"></span> </h3></center>
+			
+		</div>
+		
+	</div>
+
+	
+
+	<div class="row">
+		
+		<div class="col-md-12">
+			<center><div class="btn-group"> 
+				 <button type="button" id="btn_one" class="btn btn-primary " onclick="onClickBtnOne()" value="1" style="color:red;"></button>
+				 <button type="button" id="btn_two" class="btn btn-primary " onclick="onClickBtnTwo()" value="2" style="color:red;"></button>
+				 <button type="button" id="btn_three" class="btn btn-primary " onclick="onClickBtnThree()" value="3" style="color:red;"></button>	 
+			</div></center>
+			<center><div class="btn-group">
+				<button type="button" id="btn_four" class="btn btn-primary" onclick="onClickBtnFour()" value="4" style="color:red;"></button>
+				<button type="button" id="btn_five" class="btn btn-primary" onclick="onClickBtnFive()" value="5" style="color:red;"></button>
+				<button type="button" id="btn_six" class="btn btn-primary" onclick="onClickBtnSix()" value="6" style="color:red;"></button>
+			<div></center>
+			<center><div class="btn-group">
+				<button type="button" id="btn_seven" class="btn btn-primary" onclick="onClickBtnSeven()" value="7" style="color:red;"> </button>       
+				<button type="button" id="btn_eight" class="btn btn-primary" onclick="onClickBtnEight()" value="8" style="color:red;"></button>
+				<button type="button" id="btn_nine" class="btn btn-primary" onclick="onClickBtnNine()" value="9" style="color:red;"></button>
+ 			</div></center>
+		</div>
+	</div>
+
+<br>
+
+<center>	
+<table><tr><td>
+<button type="button" class="btn" id="btn_restart" id="btn_restart" onclick="reset()" style="font-family: 'Aldrich';">Restart</button></td>
+<td><button type="button" class="btn" id="btn_exit" onclick="out()" href="" style="font-family: 'Aldrich';">Exit</button>
+</td></tr>
+</table>
+
+<div>
+	
+</div type="container">
+	<div class="row">
+		<div class="col-md-12" style="padding:20px;">
+			<p id="winner_text" style="color:white;font-family: 'Aldrich';"></p>
+		</div>
+	</div>
+</div>
+	
+	</center>	
+
+
+<!-- Js files-->
+
+<script src="assets/js/design.js"></script>
+<script src="assets/js/Function.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+</body>
+
+</html>
