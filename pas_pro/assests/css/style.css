@@ -1,0 +1,104 @@
+body {
+    background: white
+}
+
+.heading {
+    color: rgb(29, 29, 29);
+    font-weight: 500;
+    /* font-family: 'Mukta', sans-serif; */
+    /* font-family: 'Martel', serif; */
+    font-family: "roboto";
+    padding-top: 2%;
+}
+
+.top_head {
+    background-color: black;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    padding-left: 4px;
+    padding-top: 5px;
+}
+
+.footer {
+    background: rgb(207, 207, 207)
+}
+
+.cpy_lable {
+    padding-left: 5px;
+    font-weight: 2;
+    font-size: 14px;
+    font-family: "roboto";
+    color: white;
+}
+
+.fo-connect,
+.fo-information {
+    padding-top: 10px;
+    padding-left: 5px;
+    font-weight: 400;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+.connect-li .infomation-li,
+li:hover {
+    color: blue;
+}
+
+.fo-digital-branding {
+    padding: 10px;
+}
+
+.fo-bottom-header {
+    padding-top: 4px;
+    padding-left: 4px;
+    background-color: black;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+}
+
+.side-panel {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.card-label {
+    color: white;
+    /* font-family: 'Courier New', Courier, monospace; */
+    font-family: "roboto";
+    font-size: 15px;
+    padding-top: 10px;
+}
+
+.side-panel-card:hover {
+    background-color: #ee7a06;
+}
+
+.side-panel-card {
+    background-color: rgb(29, 29, 29);
+}
+
+.main-panel {
+    margin-top: 2px;
+    padding: 10px;
+    font-family: "roboto";
+}
+
+.main-panel-fresh-app-pane,
+.main-panel-reissue-app-pane {
+    position: absolute;
+}
+
+.dis_label {
+    font-family: "sans";
+    color: #ee7a06;
+}
+
+.dis_content {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 11px;
+    color: green
+}
